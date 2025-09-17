@@ -66,7 +66,7 @@ final class DebugProvider {
     widgets.value.add(Text.rich(TextSpan(
       children: [
         TextSpan(text: title, style: const TextStyle(color: Color(0xff8b2252))),
-        TextSpan(text: '\n$message', style: const TextStyle(color: Colors.white)),
+        TextSpan(text: '\n$message'),
       ],
     )));
     widgets.value.add(UIs.height13);

@@ -55,19 +55,16 @@ class DebugPage extends StatelessWidget {
   }
 
   Widget _buildTerminal(BuildContext context) {
-    return Container(
-      color: Colors.black,
-      child: ValBuilder(
-        listenable: DebugProvider.widgets,
-        builder: (widgets) {
-          if (widgets.isEmpty) return UIs.placeholder;
-          return ListView.builder(
-            padding: const EdgeInsets.all(10),
-            itemCount: widgets.length,
-            itemBuilder: (_, index) => widgets[index],
-          );
-        },
-      ),
+    return ValBuilder(
+      listenable: DebugProvider.widgets,
+      builder: (widgets) {
+        if (widgets.isEmpty) return UIs.placeholder;
+        return ListView.builder(
+          padding: const EdgeInsets.all(10),
+          itemCount: widgets.length,
+          itemBuilder: (_, index) => widgets[index],
+        );
+      },
     );
   }
 }
