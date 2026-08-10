@@ -121,6 +121,9 @@ class LibLocalizationsRu extends LibLocalizations {
   String get download => 'скачать';
 
   @override
+  String get duration => 'Длительность';
+
+  @override
   String get edit => 'Редактировать';
 
   @override
@@ -166,6 +169,12 @@ class LibLocalizationsRu extends LibLocalizations {
   String get folder => 'Папка';
 
   @override
+  String get font => 'Шрифт';
+
+  @override
+  String get found => 'Найдено';
+
+  @override
   String get hideTitleBar => 'Скрыть строку заголовка';
 
   @override
@@ -178,10 +187,16 @@ class LibLocalizationsRu extends LibLocalizations {
   String get import => 'Импортировать';
 
   @override
+  String get init => 'Инициализировать';
+
+  @override
   String get key => 'Ключ';
 
   @override
   String get language => 'язык';
+
+  @override
+  String get license => 'Лицензия';
 
   @override
   String get log => 'лог';
@@ -194,6 +209,9 @@ class LibLocalizationsRu extends LibLocalizations {
 
   @override
   String get logout => 'Выйти';
+
+  @override
+  String get manual => 'Руководство';
 
   @override
   String get migrateCfg => 'Миграция конфигурации';
@@ -243,6 +261,9 @@ class LibLocalizationsRu extends LibLocalizations {
   String get path => 'Путь';
 
   @override
+  String get preview => 'Предпросмотр';
+
+  @override
   String get previous => 'Назад';
 
   @override
@@ -280,10 +301,16 @@ class LibLocalizationsRu extends LibLocalizations {
   String get restore => 'Восстановление';
 
   @override
+  String get result => 'Результат';
+
+  @override
   String get retry => 'Повторить';
 
   @override
   String get save => 'Сохранить';
+
+  @override
+  String get saveFailed => 'Не удалось сохранить';
 
   @override
   String get search => 'Поиск';
@@ -301,9 +328,18 @@ class LibLocalizationsRu extends LibLocalizations {
   String get share => 'Поделиться';
 
   @override
+  String get size => 'Размер';
+
+  @override
   String sizeTooLargeOnlyPrefix(Object bytes) {
     return 'Содержимое слишком большое, отображаются только первые $bytes';
   }
+
+  @override
+  String get start => 'Начать';
+
+  @override
+  String get stop => 'Стоп';
 
   @override
   String get success => 'Успех';
@@ -333,6 +369,9 @@ class LibLocalizationsRu extends LibLocalizations {
   String get thinking => 'Думаю';
 
   @override
+  String get timeout => 'Тайм-аут';
+
+  @override
   String get undo => 'Отменить';
 
   @override
@@ -343,6 +382,9 @@ class LibLocalizationsRu extends LibLocalizations {
 
   @override
   String get update => 'Обновить';
+
+  @override
+  String get upload => 'Загрузить';
 
   @override
   String get user => 'Пользователь';
@@ -367,4 +409,268 @@ class LibLocalizationsRu extends LibLocalizations {
 
   @override
   String get yesterday => 'Вчера';
+
+  @override
+  String get addr => 'Адрес';
+
+  @override
+  String get available => 'Доступно';
+
+  @override
+  String get convert => 'Конвертировать';
+
+  @override
+  String get experimentalFeature => 'Экспериментальная функция';
+
+  @override
+  String get foregroundService => 'Фоновая служба';
+
+  @override
+  String get goto => 'Перейти к';
+
+  @override
+  String get invalid => 'Недействительно';
+
+  @override
+  String get valid => 'Действительно';
+
+  @override
+  String get max => 'Максимум';
+
+  @override
+  String get min => 'Минимум';
+
+  @override
+  String get more => 'Больше';
+
+  @override
+  String get milliseconds => 'Миллисекунды';
+
+  @override
+  String get permission => 'Разрешение';
+
+  @override
+  String get read => 'Читать';
+
+  @override
+  String get write => 'Записывать';
+
+  @override
+  String get done => 'Готово';
+
+  @override
+  String get speed => 'Скорость';
+
+  @override
+  String get stat => 'Статистика';
+
+  @override
+  String get time => 'Время';
+
+  @override
+  String get times => 'Раз';
+
+  @override
+  String get used => 'Использовано';
+
+  @override
+  String get view => 'Просмотр';
+
+  @override
+  String get askAiModel => 'Модель';
+
+  @override
+  String get battery => 'Батарея';
+
+  @override
+  String get cmd => 'Команда';
+
+  @override
+  String get confirm => 'Подтвердить';
+
+  @override
+  String get conn => 'Подключение';
+
+  @override
+  String get container => 'Контейнер';
+
+  @override
+  String get customCmdDocUrl =>
+      'https://github.com/lollipopkit/flutter_server_box/wiki#custom-commands';
+
+  @override
+  String get decode => 'Декодировать';
+
+  @override
+  String get decompress => 'Разархивировать';
+
+  @override
+  String get disconnected => 'Отключено';
+
+  @override
+  String get disk => 'Диск';
+
+  @override
+  String get emulator => 'Эмулятор';
+
+  @override
+  String get encode => 'Кодировать';
+
+  @override
+  String get force => 'Принудительно';
+
+  @override
+  String get host => 'Хост';
+
+  @override
+  String get inner => 'Встроенный';
+
+  @override
+  String get install => 'установить';
+
+  @override
+  String get location => 'Местоположение';
+
+  @override
+  String get loadingEllipsis => '...';
+
+  @override
+  String get logs => 'Журналы';
+
+  @override
+  String get loss => 'Потери пакетов';
+
+  @override
+  String get menuHelp => 'Help';
+
+  @override
+  String get menuInfo => 'Info';
+
+  @override
+  String get menuNavigate => 'Navigate';
+
+  @override
+  String get menuQuit => 'Quit';
+
+  @override
+  String get menuSettings => 'Setting';
+
+  @override
+  String get menuWiki => 'Wiki';
+
+  @override
+  String get mission => 'Задача';
+
+  @override
+  String get ms => 'мс';
+
+  @override
+  String get net => 'Сеть';
+
+  @override
+  String get node => 'Узел';
+
+  @override
+  String get notAvailable => 'Недоступно';
+
+  @override
+  String get pingAvg => 'В среднем:';
+
+  @override
+  String get pkg => 'Менеджер пакетов';
+
+  @override
+  String get port => 'Порт';
+
+  @override
+  String get portForward => 'Port Forward';
+
+  @override
+  String get process => 'Процесс';
+
+  @override
+  String get prune => 'Обрезать';
+
+  @override
+  String get reboot => 'Перезагрузка';
+
+  @override
+  String get restart => 'Перезапустить';
+
+  @override
+  String get route => 'Маршрутизация';
+
+  @override
+  String get run => 'Запустить';
+
+  @override
+  String get running => 'Запущено';
+
+  @override
+  String get saved => 'Сохранено';
+
+  @override
+  String get sensors => 'Датчики';
+
+  @override
+  String get sequence => 'Последовательность';
+
+  @override
+  String get server => 'Сервер';
+
+  @override
+  String get servers => 'серверов';
+
+  @override
+  String get shutdown => 'Выключение';
+
+  @override
+  String get snippet => 'Фрагмент';
+
+  @override
+  String get stats => 'Статистика';
+
+  @override
+  String get stopped => 'Остановлено';
+
+  @override
+  String get storage => 'Хранение';
+
+  @override
+  String get suspend => 'Приостановить';
+
+  @override
+  String get sudoPassword => 'пароль sudo';
+
+  @override
+  String sudoPwdTitle(Object pwd) {
+    return 'sudo $pwd';
+  }
+
+  @override
+  String get temperature => 'Температура';
+
+  @override
+  String get terminal => 'Терминал';
+
+  @override
+  String get test => 'Тест';
+
+  @override
+  String get theme => 'Тема';
+
+  @override
+  String get total => 'Всего';
+
+  @override
+  String get totalAttempts => 'Общее';
+
+  @override
+  String get traffic => 'Трафик';
+
+  @override
+  String get ttl => 'TTL';
+
+  @override
+  String get uptime => 'Время работы';
 }

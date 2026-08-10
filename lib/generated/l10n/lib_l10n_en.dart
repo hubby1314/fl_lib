@@ -121,6 +121,9 @@ class LibLocalizationsEn extends LibLocalizations {
   String get download => 'Download';
 
   @override
+  String get duration => 'Duration';
+
+  @override
   String get edit => 'Edit';
 
   @override
@@ -166,6 +169,12 @@ class LibLocalizationsEn extends LibLocalizations {
   String get folder => 'Folder';
 
   @override
+  String get font => 'Font';
+
+  @override
+  String get found => 'Found';
+
+  @override
   String get hideTitleBar => 'Hide title bar';
 
   @override
@@ -178,10 +187,16 @@ class LibLocalizationsEn extends LibLocalizations {
   String get import => 'Import';
 
   @override
+  String get init => 'Initialize';
+
+  @override
   String get key => 'Key';
 
   @override
   String get language => 'Language';
+
+  @override
+  String get license => 'License';
 
   @override
   String get log => 'Log';
@@ -194,6 +209,9 @@ class LibLocalizationsEn extends LibLocalizations {
 
   @override
   String get logout => 'Logout';
+
+  @override
+  String get manual => 'Manual';
 
   @override
   String get migrateCfg => 'Configuration migration';
@@ -243,6 +261,9 @@ class LibLocalizationsEn extends LibLocalizations {
   String get path => 'Path';
 
   @override
+  String get preview => 'Preview';
+
+  @override
   String get previous => 'Previous';
 
   @override
@@ -280,10 +301,16 @@ class LibLocalizationsEn extends LibLocalizations {
   String get restore => 'Restore';
 
   @override
+  String get result => 'Result';
+
+  @override
   String get retry => 'Retry';
 
   @override
   String get save => 'Save';
+
+  @override
+  String get saveFailed => 'Save failed';
 
   @override
   String get search => 'Search';
@@ -301,9 +328,18 @@ class LibLocalizationsEn extends LibLocalizations {
   String get share => 'Share';
 
   @override
+  String get size => 'Size';
+
+  @override
   String sizeTooLargeOnlyPrefix(Object bytes) {
     return 'Content too large, displaying only the first $bytes';
   }
+
+  @override
+  String get start => 'Start';
+
+  @override
+  String get stop => 'Stop';
 
   @override
   String get success => 'Success';
@@ -333,6 +369,9 @@ class LibLocalizationsEn extends LibLocalizations {
   String get thinking => 'Thinking';
 
   @override
+  String get timeout => 'Timeout';
+
+  @override
   String get undo => 'Undo';
 
   @override
@@ -343,6 +382,9 @@ class LibLocalizationsEn extends LibLocalizations {
 
   @override
   String get update => 'Update';
+
+  @override
+  String get upload => 'Upload';
 
   @override
   String get user => 'User';
@@ -367,4 +409,268 @@ class LibLocalizationsEn extends LibLocalizations {
 
   @override
   String get yesterday => 'Yesterday';
+
+  @override
+  String get addr => 'Address';
+
+  @override
+  String get available => 'Available';
+
+  @override
+  String get convert => 'Convert';
+
+  @override
+  String get experimentalFeature => 'Experimental Feature';
+
+  @override
+  String get foregroundService => 'Foreground Service';
+
+  @override
+  String get goto => 'Go to';
+
+  @override
+  String get invalid => 'Invalid';
+
+  @override
+  String get valid => 'Valid';
+
+  @override
+  String get max => 'Maximum';
+
+  @override
+  String get min => 'Minimum';
+
+  @override
+  String get more => 'More';
+
+  @override
+  String get milliseconds => 'Milliseconds';
+
+  @override
+  String get permission => 'Permission';
+
+  @override
+  String get read => 'Read';
+
+  @override
+  String get write => 'Write';
+
+  @override
+  String get done => 'Done';
+
+  @override
+  String get speed => 'Speed';
+
+  @override
+  String get stat => 'Statistics';
+
+  @override
+  String get time => 'Time';
+
+  @override
+  String get times => 'Times';
+
+  @override
+  String get used => 'Used';
+
+  @override
+  String get view => 'View';
+
+  @override
+  String get askAiModel => 'Model';
+
+  @override
+  String get battery => 'Battery';
+
+  @override
+  String get cmd => 'Command';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get conn => 'Connection';
+
+  @override
+  String get container => 'Container';
+
+  @override
+  String get customCmdDocUrl =>
+      'https://github.com/lollipopkit/flutter_server_box/wiki#custom-commands';
+
+  @override
+  String get decode => 'Decode';
+
+  @override
+  String get decompress => 'Decompress';
+
+  @override
+  String get disconnected => 'Disconnected';
+
+  @override
+  String get disk => 'Disk';
+
+  @override
+  String get emulator => 'Emulator';
+
+  @override
+  String get encode => 'Encode';
+
+  @override
+  String get force => 'Force';
+
+  @override
+  String get host => 'Host';
+
+  @override
+  String get inner => 'Inner';
+
+  @override
+  String get install => 'install';
+
+  @override
+  String get location => 'Location';
+
+  @override
+  String get loadingEllipsis => '...';
+
+  @override
+  String get logs => 'Logs';
+
+  @override
+  String get loss => 'loss';
+
+  @override
+  String get menuHelp => 'Help';
+
+  @override
+  String get menuInfo => 'Info';
+
+  @override
+  String get menuNavigate => 'Navigate';
+
+  @override
+  String get menuQuit => 'Quit';
+
+  @override
+  String get menuSettings => 'Setting';
+
+  @override
+  String get menuWiki => 'Wiki';
+
+  @override
+  String get mission => 'Mission';
+
+  @override
+  String get ms => 'ms';
+
+  @override
+  String get net => 'Network';
+
+  @override
+  String get node => 'Node';
+
+  @override
+  String get notAvailable => 'Unavailable';
+
+  @override
+  String get pingAvg => 'Avg:';
+
+  @override
+  String get pkg => 'Pkg';
+
+  @override
+  String get port => 'Port';
+
+  @override
+  String get portForward => 'Port Forward';
+
+  @override
+  String get process => 'Process';
+
+  @override
+  String get prune => 'Prune';
+
+  @override
+  String get reboot => 'Reboot';
+
+  @override
+  String get restart => 'Restart';
+
+  @override
+  String get route => 'Routing';
+
+  @override
+  String get run => 'Run';
+
+  @override
+  String get running => 'Running';
+
+  @override
+  String get saved => 'Saved';
+
+  @override
+  String get sensors => 'Sensor';
+
+  @override
+  String get sequence => 'Sequence';
+
+  @override
+  String get server => 'Server';
+
+  @override
+  String get servers => 'servers';
+
+  @override
+  String get shutdown => 'Shutdown';
+
+  @override
+  String get snippet => 'Snippet';
+
+  @override
+  String get stats => 'Statistics';
+
+  @override
+  String get stopped => 'Stopped';
+
+  @override
+  String get storage => 'Storage';
+
+  @override
+  String get suspend => 'Suspend';
+
+  @override
+  String get sudoPassword => 'sudo password';
+
+  @override
+  String sudoPwdTitle(Object pwd) {
+    return 'sudo $pwd';
+  }
+
+  @override
+  String get temperature => 'Temperature';
+
+  @override
+  String get terminal => 'Terminal';
+
+  @override
+  String get test => 'Test';
+
+  @override
+  String get theme => 'Theme';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get totalAttempts => 'Total';
+
+  @override
+  String get traffic => 'Traffic';
+
+  @override
+  String get ttl => 'TTL';
+
+  @override
+  String get uptime => 'Uptime';
 }

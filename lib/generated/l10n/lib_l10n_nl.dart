@@ -121,6 +121,9 @@ class LibLocalizationsNl extends LibLocalizations {
   String get download => 'Downloaden';
 
   @override
+  String get duration => 'Duur';
+
+  @override
   String get edit => 'Bewerken';
 
   @override
@@ -166,6 +169,12 @@ class LibLocalizationsNl extends LibLocalizations {
   String get folder => 'Map';
 
   @override
+  String get font => 'Lettertype';
+
+  @override
+  String get found => 'Gevonden';
+
+  @override
   String get hideTitleBar => 'Titelbalk verbergen';
 
   @override
@@ -178,10 +187,16 @@ class LibLocalizationsNl extends LibLocalizations {
   String get import => 'Importeren';
 
   @override
+  String get init => 'Initialiseren';
+
+  @override
   String get key => 'Sleutel';
 
   @override
   String get language => 'Taal';
+
+  @override
+  String get license => 'Licentie';
 
   @override
   String get log => 'Logboek';
@@ -194,6 +209,9 @@ class LibLocalizationsNl extends LibLocalizations {
 
   @override
   String get logout => 'Uitloggen';
+
+  @override
+  String get manual => 'Handleiding';
 
   @override
   String get migrateCfg => 'Configuratiemigratie';
@@ -244,6 +262,9 @@ class LibLocalizationsNl extends LibLocalizations {
   String get path => 'Pad';
 
   @override
+  String get preview => 'Voorbeeld';
+
+  @override
   String get previous => 'Vorige';
 
   @override
@@ -281,10 +302,16 @@ class LibLocalizationsNl extends LibLocalizations {
   String get restore => 'Herstellen';
 
   @override
+  String get result => 'Resultaat';
+
+  @override
   String get retry => 'Opnieuw proberen';
 
   @override
   String get save => 'Opslaan';
+
+  @override
+  String get saveFailed => 'Opslaan mislukt';
 
   @override
   String get search => 'Zoeken';
@@ -302,9 +329,18 @@ class LibLocalizationsNl extends LibLocalizations {
   String get share => 'Delen';
 
   @override
+  String get size => 'Grootte';
+
+  @override
   String sizeTooLargeOnlyPrefix(Object bytes) {
     return 'Inhoud te groot, alleen de eerste $bytes worden weergegeven';
   }
+
+  @override
+  String get start => 'Start';
+
+  @override
+  String get stop => 'Stop';
 
   @override
   String get success => 'Succes';
@@ -334,6 +370,9 @@ class LibLocalizationsNl extends LibLocalizations {
   String get thinking => 'Aan het nadenken';
 
   @override
+  String get timeout => 'Timeout';
+
+  @override
   String get undo => 'Ongedaan maken';
 
   @override
@@ -344,6 +383,9 @@ class LibLocalizationsNl extends LibLocalizations {
 
   @override
   String get update => 'Bijwerken';
+
+  @override
+  String get upload => 'Uploaden';
 
   @override
   String get user => 'Gebruiker';
@@ -368,4 +410,268 @@ class LibLocalizationsNl extends LibLocalizations {
 
   @override
   String get yesterday => 'Gisteren';
+
+  @override
+  String get addr => 'Adres';
+
+  @override
+  String get available => 'Beschikbaar';
+
+  @override
+  String get convert => 'Converteren';
+
+  @override
+  String get experimentalFeature => 'Experimentele functie';
+
+  @override
+  String get foregroundService => 'Voorgrondservice';
+
+  @override
+  String get goto => 'Ga naar';
+
+  @override
+  String get invalid => 'Ongeldig';
+
+  @override
+  String get valid => 'Geldig';
+
+  @override
+  String get max => 'Maximum';
+
+  @override
+  String get min => 'Minimum';
+
+  @override
+  String get more => 'Meer';
+
+  @override
+  String get milliseconds => 'Milliseconden';
+
+  @override
+  String get permission => 'Toestemming';
+
+  @override
+  String get read => 'Lezen';
+
+  @override
+  String get write => 'Schrijven';
+
+  @override
+  String get done => 'Klaar';
+
+  @override
+  String get speed => 'Snelheid';
+
+  @override
+  String get stat => 'Statistieken';
+
+  @override
+  String get time => 'Tijd';
+
+  @override
+  String get times => 'Keren';
+
+  @override
+  String get used => 'Gebruikt';
+
+  @override
+  String get view => 'Bekijken';
+
+  @override
+  String get askAiModel => 'Model';
+
+  @override
+  String get battery => 'Batterij';
+
+  @override
+  String get cmd => 'Opdracht';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get conn => 'Verbinding';
+
+  @override
+  String get container => 'Container';
+
+  @override
+  String get customCmdDocUrl =>
+      'https://github.com/lollipopkit/flutter_server_box/wiki#custom-commands';
+
+  @override
+  String get decode => 'Decoderen';
+
+  @override
+  String get decompress => 'Decomprimeren';
+
+  @override
+  String get disconnected => 'Verbroken';
+
+  @override
+  String get disk => 'Schijf';
+
+  @override
+  String get emulator => 'Emulator';
+
+  @override
+  String get encode => 'Coderen';
+
+  @override
+  String get force => 'Forceer';
+
+  @override
+  String get host => 'Host';
+
+  @override
+  String get inner => 'Intern';
+
+  @override
+  String get install => 'Installeren';
+
+  @override
+  String get location => 'Locatie';
+
+  @override
+  String get loadingEllipsis => '...';
+
+  @override
+  String get logs => 'Logboeken';
+
+  @override
+  String get loss => 'verlies';
+
+  @override
+  String get menuHelp => 'Help';
+
+  @override
+  String get menuInfo => 'Info';
+
+  @override
+  String get menuNavigate => 'Navigate';
+
+  @override
+  String get menuQuit => 'Quit';
+
+  @override
+  String get menuSettings => 'Setting';
+
+  @override
+  String get menuWiki => 'Wiki';
+
+  @override
+  String get mission => 'Missie';
+
+  @override
+  String get ms => 'ms';
+
+  @override
+  String get net => 'Netwerk';
+
+  @override
+  String get node => 'Node';
+
+  @override
+  String get notAvailable => 'Niet beschikbaar';
+
+  @override
+  String get pingAvg => 'Gem:';
+
+  @override
+  String get pkg => 'Pkg';
+
+  @override
+  String get port => 'Poort';
+
+  @override
+  String get portForward => 'Port Forward';
+
+  @override
+  String get process => 'Proces';
+
+  @override
+  String get prune => 'Snoeien';
+
+  @override
+  String get reboot => 'Herstart';
+
+  @override
+  String get restart => 'Herstarten';
+
+  @override
+  String get route => 'Route';
+
+  @override
+  String get run => 'Uitvoeren';
+
+  @override
+  String get running => 'Uitgevoerd';
+
+  @override
+  String get saved => 'Opgeslagen';
+
+  @override
+  String get sensors => 'Sensor';
+
+  @override
+  String get sequence => 'Volgorde';
+
+  @override
+  String get server => 'Server';
+
+  @override
+  String get servers => 'servers';
+
+  @override
+  String get shutdown => 'Afsluiten';
+
+  @override
+  String get snippet => 'Fragment';
+
+  @override
+  String get stats => 'Statistieken';
+
+  @override
+  String get stopped => 'Gestopt';
+
+  @override
+  String get storage => 'Opslag';
+
+  @override
+  String get suspend => 'Ophangen';
+
+  @override
+  String get sudoPassword => 'sudo-wachtwoord';
+
+  @override
+  String sudoPwdTitle(Object pwd) {
+    return 'sudo $pwd';
+  }
+
+  @override
+  String get temperature => 'Temperatuur';
+
+  @override
+  String get terminal => 'Terminal';
+
+  @override
+  String get test => 'Testen';
+
+  @override
+  String get theme => 'Thema';
+
+  @override
+  String get total => 'Totaal';
+
+  @override
+  String get totalAttempts => 'Totaal';
+
+  @override
+  String get traffic => 'Verkeer';
+
+  @override
+  String get ttl => 'TTL';
+
+  @override
+  String get uptime => 'Uptime';
 }

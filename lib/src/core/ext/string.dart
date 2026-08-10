@@ -1,12 +1,13 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:math';
-import 'dart:typed_data';
 
 import 'package:extended_image/extended_image.dart';
 import 'package:fl_lib/fl_lib.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import '../utils/platform/image.dart';
 
 extension StringX on String {
   /// [isEmpty] => [null]
@@ -139,12 +140,9 @@ extension StringPathX on String {
 
   /// Get the file name from the path.
   ///
-  /// - [separator] is the separator of the path.
   /// - [withoutExtension] is whether to remove the extension
-  ///
-  /// {@macro string_path_separator}
-  String? getFileName({String separator = '/', bool withoutExtension = false}) {
-    final index = lastIndexOf(separator);
+  String? getFileName({bool withoutExtension = false}) {
+    final index = lastIndexOf(Pfs.seperator);
     if (index == -1) return null;
     final wholeName = substring(index + 1);
     if (!withoutExtension) return wholeName;
@@ -273,7 +271,7 @@ extension StringImgX on String {
       } else if (startsWith('assets')) {
         return ExtendedAssetImageProvider(this, imageCacheName: imageCacheName);
       }
-      return ExtendedFileImageProvider(File(this), imageCacheName: imageCacheName);
+      return PlatformImage.file(this, imageCacheName: imageCacheName);
     } catch (e, s) {
       dprint('getImageProvider', e, s);
       if (!catchErr) rethrow;

@@ -14,6 +14,7 @@ final class MultiList extends StatefulWidget {
 
   /// Number used to divide available width for column sizing.
   final double widthDivider;
+  final double scrollbarGutter;
 
   const MultiList({
     super.key,
@@ -21,7 +22,8 @@ final class MultiList extends StatefulWidget {
     this.outerPadding = kOuterPadding,
     this.widthDivider = 2.2,
     this.betweenPadding = 10,
-  });
+    this.scrollbarGutter = 12,
+  }) : assert(scrollbarGutter >= 0);
 
   /// Default outer padding.
   static const kOuterPadding = EdgeInsets.symmetric(horizontal: 17, vertical: 13);
@@ -41,14 +43,6 @@ final class _MultiListState extends State<MultiList> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _isMobile = context.isMobile;
-  }
-
-  @override
-  void didUpdateWidget(covariant MultiList oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (!identical(oldWidget.children, widget.children)) {
-      setState(() {});
-    }
   }
 
   @override
@@ -75,24 +69,27 @@ final class _MultiListState extends State<MultiList> {
       final totalBetweenPadding = widget.betweenPadding * (len - 1);
       final columnWidth = (cons.maxWidth - widget.outerPadding.horizontal - totalBetweenPadding) / widget.widthDivider;
 
-      return ListView.separated(
-        padding: widget.outerPadding,
+      return Scrollbar(
         controller: _horizonScroll,
-        scrollDirection: Axis.horizontal,
-        itemCount: len,
-        separatorBuilder: (_, _) => SizedBox(width: widget.betweenPadding),
-        itemBuilder: (_, i) {
-          final col = widget.children[i];
+        child: ListView.separated(
+          padding: widget.outerPadding,
+          controller: _horizonScroll,
+          scrollDirection: Axis.horizontal,
+          itemCount: len,
+          separatorBuilder: (_, _) => SizedBox(width: widget.betweenPadding),
+          itemBuilder: (_, i) {
+            final col = widget.children[i];
 
-          return SizedBox(
-            width: columnWidth,
-            child: ListView.builder(
-              // key: PageStorageKey(i), // Keep independent scroll position
-              itemCount: col.length,
-              itemBuilder: (_, index) => col[index],
-            ),
-          );
-        },
+            return SizedBox(
+              width: columnWidth,
+              child: ListView.builder(
+                padding: EdgeInsetsDirectional.only(end: widget.scrollbarGutter),
+                itemCount: col.length,
+                itemBuilder: (_, index) => col[index],
+              ),
+            );
+          },
+        ),
       );
     });
   }
@@ -144,25 +141,39 @@ class _AutoMultiListState extends State<AutoMultiList> {
   @override
   void didUpdateWidget(covariant AutoMultiList oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (!identical(widget.children, oldWidget.children) ||
+    final needsUpdate = oldWidget.children.length != widget.children.length ||
         oldWidget.columnWidth != widget.columnWidth ||
-        oldWidget.outerPadding != widget.outerPadding) {
+        oldWidget.outerPadding != widget.outerPadding;
+    if (needsUpdate) {
       _updateDistribution(forceUpdate: true);
-      setState(() {});
     }
   }
 
   void _updateDistribution({bool forceUpdate = false}) {
-    final currentChildrenHashCode = widget.children.hashCode;
-    if (!forceUpdate && _totalWidth == _lastTotalWidth && currentChildrenHashCode == _lastChildrenHashCode) {
+    final currentWidth = _totalWidth;
+    final availableWidth = currentWidth - widget.outerPadding.horizontal;
+    final newColumnCount = availableWidth / widget.columnWidth;
+    final clampedColumnCount = newColumnCount.floor().clamp(1, 10);
+
+    final currentChildrenHashCode = _computeChildrenHashCode(widget.children);
+    final widthChanged = (_lastTotalWidth - currentWidth).abs() > 1.0;
+    final needsUpdate = forceUpdate ||
+        widthChanged ||
+        _lastChildrenHashCode != currentChildrenHashCode ||
+        _actualColumnCount != clampedColumnCount;
+
+    if (!needsUpdate) {
       return;
     }
 
-    final availableWidth = _totalWidth - widget.outerPadding.horizontal;
-    _actualColumnCount = (availableWidth / widget.columnWidth).floor().clamp(1, 10);
+    _actualColumnCount = clampedColumnCount;
     _distributedChildren = _distributeChildrenToColumns(widget.children, _actualColumnCount);
-    _lastTotalWidth = _totalWidth;
+    _lastTotalWidth = currentWidth;
     _lastChildrenHashCode = currentChildrenHashCode;
+  }
+
+  int _computeChildrenHashCode(List<Widget> children) {
+    return Object.hashAll(children);
   }
 
   @override

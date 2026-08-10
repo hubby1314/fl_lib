@@ -33,13 +33,11 @@ final class AutoHideState extends State<AutoHide> {
     super.initState();
     widget.scrollController.addListener(_scrollListener);
     _setupTimer();
-    _controller.addListener(_onControllerUpdate);
   }
 
   @override
   void dispose() {
     widget.scrollController.removeListener(_scrollListener);
-    _controller.removeListener(_onControllerUpdate);
     if (widget.hideController == null) {
       _controller.dispose();
     }
@@ -47,10 +45,6 @@ final class AutoHideState extends State<AutoHide> {
     _scrollDebouncer?.cancel();
     _timer = _scrollDebouncer = null;
     super.dispose();
-  }
-
-  void _onControllerUpdate() {
-    if (mounted) setState(() {});
   }
 
   void _setupTimer() {
@@ -96,26 +90,37 @@ final class AutoHideState extends State<AutoHide> {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: Durations.medium1,
-      curve: Curves.easeInOutCubic,
-      transform: _transform,
+    final hiddenOffset = _getHiddenOffset();
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) {
+        return TweenAnimationBuilder<Offset>(
+          tween: Tween<Offset>(
+            end: _controller.visible ? Offset.zero : hiddenOffset,
+          ),
+          duration: Durations.medium1,
+          curve: Curves.easeInOutCubic,
+          builder: (context, offset, animatedChild) {
+            return Transform.translate(
+              offset: offset,
+              child: animatedChild,
+            );
+          },
+          child: child,
+        );
+      },
       child: widget.child,
     );
   }
 
-  Matrix4? get _transform {
-    final visible = _controller.visible;
-    switch (widget.direction) {
-      case AxisDirection.down:
-        return visible ? Matrix4.identity() : Matrix4.translationValues(0, widget.offset, 0);
-      case AxisDirection.up:
-        return visible ? Matrix4.identity() : Matrix4.translationValues(0, -widget.offset, 0);
-      case AxisDirection.left:
-        return visible ? Matrix4.identity() : Matrix4.translationValues(-widget.offset, 0, 0);
-      case AxisDirection.right:
-        return visible ? Matrix4.identity() : Matrix4.translationValues(widget.offset, 0, 0);
-    }
+  Offset _getHiddenOffset() {
+    final offsetPx = widget.offset;
+    return switch (widget.direction) {
+      AxisDirection.down => Offset(0, offsetPx),
+      AxisDirection.up => Offset(0, -offsetPx),
+      AxisDirection.left => Offset(-offsetPx, 0),
+      AxisDirection.right => Offset(offsetPx, 0),
+    };
   }
 }
 

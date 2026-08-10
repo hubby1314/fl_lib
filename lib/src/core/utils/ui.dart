@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:fl_lib/fl_lib.dart';
@@ -93,5 +94,27 @@ abstract final class SystemUIs {
         windowManager.addListener(listener);
       }
     });
+  }
+
+  /// Updates the title bar style at runtime without restarting the app.
+  ///
+  /// Only works on desktop platforms.
+  static Future<void> updateTitleBarStyle({required bool hideTitleBar}) async {
+    if (!isDesktop) return;
+    await windowManager.setTitleBarStyle(
+      hideTitleBar ? TitleBarStyle.hidden : TitleBarStyle.normal,
+    );
+    WindowFrameConfig.setShowCaption(hideTitleBar);
+  }
+}
+
+void withTextFieldController(Future<void> Function(TextEditingController) callback) async {
+  final controller = TextEditingController();
+  try {
+    await callback(controller);
+    // Wait a moment to ensure any UI updates are processed
+    await Future.delayed(const Duration(seconds: 3));
+  } finally {
+    controller.dispose();
   }
 }

@@ -121,6 +121,9 @@ class LibLocalizationsId extends LibLocalizations {
   String get download => 'Unduh';
 
   @override
+  String get duration => 'Durasi';
+
+  @override
   String get edit => 'Edit';
 
   @override
@@ -166,6 +169,12 @@ class LibLocalizationsId extends LibLocalizations {
   String get folder => 'Map';
 
   @override
+  String get font => 'Font';
+
+  @override
+  String get found => 'Ditemukan';
+
+  @override
   String get hideTitleBar => 'Sembunyikan bilah judul';
 
   @override
@@ -178,10 +187,16 @@ class LibLocalizationsId extends LibLocalizations {
   String get import => 'Impor';
 
   @override
+  String get init => 'Inisialisasi';
+
+  @override
   String get key => 'Kunci';
 
   @override
   String get language => 'Bahasa';
+
+  @override
+  String get license => 'Lisensi';
 
   @override
   String get log => 'Catatan';
@@ -194,6 +209,9 @@ class LibLocalizationsId extends LibLocalizations {
 
   @override
   String get logout => 'Keluar';
+
+  @override
+  String get manual => 'Manual';
 
   @override
   String get migrateCfg => 'Migrasi konfigurasi';
@@ -244,6 +262,9 @@ class LibLocalizationsId extends LibLocalizations {
   String get path => 'Jalur';
 
   @override
+  String get preview => 'Pratinjau';
+
+  @override
   String get previous => 'Sebelumnya';
 
   @override
@@ -281,10 +302,16 @@ class LibLocalizationsId extends LibLocalizations {
   String get restore => 'Pulihkan';
 
   @override
+  String get result => 'Hasil';
+
+  @override
   String get retry => 'Coba Lagi';
 
   @override
   String get save => 'Simpan';
+
+  @override
+  String get saveFailed => 'Gagal menyimpan';
 
   @override
   String get search => 'Cari';
@@ -302,9 +329,18 @@ class LibLocalizationsId extends LibLocalizations {
   String get share => 'Bagikan';
 
   @override
+  String get size => 'Ukuran';
+
+  @override
   String sizeTooLargeOnlyPrefix(Object bytes) {
     return 'Konten terlalu besar, hanya menampilkan $bytes pertama';
   }
+
+  @override
+  String get start => 'Mulai';
+
+  @override
+  String get stop => 'Berhenti';
 
   @override
   String get success => 'Sukses';
@@ -334,6 +370,9 @@ class LibLocalizationsId extends LibLocalizations {
   String get thinking => 'Sedang berpikir';
 
   @override
+  String get timeout => 'Waktu habis';
+
+  @override
   String get undo => 'Batalkan';
 
   @override
@@ -344,6 +383,9 @@ class LibLocalizationsId extends LibLocalizations {
 
   @override
   String get update => 'Perbarui';
+
+  @override
+  String get upload => 'Unggah';
 
   @override
   String get user => 'Username';
@@ -368,4 +410,268 @@ class LibLocalizationsId extends LibLocalizations {
 
   @override
   String get yesterday => 'Kemarin';
+
+  @override
+  String get addr => 'Alamat';
+
+  @override
+  String get available => 'Tersedia';
+
+  @override
+  String get convert => 'Konversi';
+
+  @override
+  String get experimentalFeature => 'Fitur Eksperimental';
+
+  @override
+  String get foregroundService => 'Layanan Latar Depan';
+
+  @override
+  String get goto => 'Pergi ke';
+
+  @override
+  String get invalid => 'Tidak valid';
+
+  @override
+  String get valid => 'Valid';
+
+  @override
+  String get max => 'Maksimum';
+
+  @override
+  String get min => 'Minimum';
+
+  @override
+  String get more => 'Lebih banyak';
+
+  @override
+  String get milliseconds => 'Milidetik';
+
+  @override
+  String get permission => 'Izin';
+
+  @override
+  String get read => 'Baca';
+
+  @override
+  String get write => 'Tulis';
+
+  @override
+  String get done => 'Selesai';
+
+  @override
+  String get speed => 'Kecepatan';
+
+  @override
+  String get stat => 'Statistik';
+
+  @override
+  String get time => 'Waktu';
+
+  @override
+  String get times => 'Kali';
+
+  @override
+  String get used => 'Digunakan';
+
+  @override
+  String get view => 'Lihat';
+
+  @override
+  String get askAiModel => 'Model';
+
+  @override
+  String get battery => 'Baterai';
+
+  @override
+  String get cmd => 'Memerintah';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get conn => 'Koneksi';
+
+  @override
+  String get container => 'Wadah';
+
+  @override
+  String get customCmdDocUrl =>
+      'https://github.com/lollipopkit/flutter_server_box/wiki#custom-commands';
+
+  @override
+  String get decode => 'Membaca sandi';
+
+  @override
+  String get decompress => 'Dekompresi';
+
+  @override
+  String get disconnected => 'Terputus';
+
+  @override
+  String get disk => 'Disk';
+
+  @override
+  String get emulator => 'Emulator';
+
+  @override
+  String get encode => 'Menyandi';
+
+  @override
+  String get force => 'sukarela';
+
+  @override
+  String get host => 'Host';
+
+  @override
+  String get inner => 'Batin';
+
+  @override
+  String get install => 'Install';
+
+  @override
+  String get location => 'Lokasi';
+
+  @override
+  String get loadingEllipsis => '...';
+
+  @override
+  String get logs => 'Log';
+
+  @override
+  String get loss => 'kehilangan';
+
+  @override
+  String get menuHelp => 'Help';
+
+  @override
+  String get menuInfo => 'Info';
+
+  @override
+  String get menuNavigate => 'Navigate';
+
+  @override
+  String get menuQuit => 'Quit';
+
+  @override
+  String get menuSettings => 'Setting';
+
+  @override
+  String get menuWiki => 'Wiki';
+
+  @override
+  String get mission => 'Misi';
+
+  @override
+  String get ms => 'MS';
+
+  @override
+  String get net => 'Jaringan';
+
+  @override
+  String get node => 'Node';
+
+  @override
+  String get notAvailable => 'Tidak tersedia';
+
+  @override
+  String get pingAvg => 'Rata -rata:';
+
+  @override
+  String get pkg => 'Pkg';
+
+  @override
+  String get port => 'Port';
+
+  @override
+  String get portForward => 'Port Forward';
+
+  @override
+  String get process => 'Proses';
+
+  @override
+  String get prune => 'Pangkas';
+
+  @override
+  String get reboot => 'Reboot';
+
+  @override
+  String get restart => 'Mengulang kembali';
+
+  @override
+  String get route => 'Routing';
+
+  @override
+  String get run => 'Berlari';
+
+  @override
+  String get running => 'berlari';
+
+  @override
+  String get saved => 'Diselamatkan';
+
+  @override
+  String get sensors => 'Sensor';
+
+  @override
+  String get sequence => 'Urutan';
+
+  @override
+  String get server => 'Server';
+
+  @override
+  String get servers => 'server';
+
+  @override
+  String get shutdown => 'Matikan';
+
+  @override
+  String get snippet => 'Snippet';
+
+  @override
+  String get stats => 'Statistik';
+
+  @override
+  String get stopped => 'dihentikan';
+
+  @override
+  String get storage => 'Penyimpanan';
+
+  @override
+  String get suspend => 'Suspend';
+
+  @override
+  String get sudoPassword => 'kata sandi sudo';
+
+  @override
+  String sudoPwdTitle(Object pwd) {
+    return 'sudo $pwd';
+  }
+
+  @override
+  String get temperature => 'Suhu';
+
+  @override
+  String get terminal => 'Terminal';
+
+  @override
+  String get test => 'pengujian';
+
+  @override
+  String get theme => 'Tema';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get totalAttempts => 'Total';
+
+  @override
+  String get traffic => 'Lalu lintas';
+
+  @override
+  String get ttl => 'TTL';
+
+  @override
+  String get uptime => 'Uptime';
 }

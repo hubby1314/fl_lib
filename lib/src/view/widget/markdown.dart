@@ -1,6 +1,6 @@
 import 'package:fl_lib/fl_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 
 final class SimpleMarkdown extends StatelessWidget {
   final String data;
@@ -18,6 +18,7 @@ final class SimpleMarkdown extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = Theme.of(context).colorScheme.primary;
     return MarkdownBody(
       data: data,
       onTapLink: (text, href, title) async {
@@ -28,8 +29,9 @@ final class SimpleMarkdown extends StatelessWidget {
         onOpenFail?.call();
       },
       selectable: selectable,
-      styleSheet: styleSheet?.copyWith(a: TextStyle(color: UIs.colorSeed)) ??
-          MarkdownStyleSheet(a: TextStyle(color: UIs.colorSeed)),
+      extensionSet: MarkdownUtils.extensionSet,
+      styleSheet:
+          styleSheet?.copyWith(a: TextStyle(color: primaryColor)) ?? MarkdownStyleSheet(a: TextStyle(color: primaryColor)),
     );
   }
 }

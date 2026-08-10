@@ -10,7 +10,9 @@ import 'lib_l10n_en.dart';
 import 'lib_l10n_es.dart';
 import 'lib_l10n_fr.dart';
 import 'lib_l10n_id.dart';
+import 'lib_l10n_it.dart';
 import 'lib_l10n_ja.dart';
+import 'lib_l10n_ko.dart';
 import 'lib_l10n_nl.dart';
 import 'lib_l10n_pt.dart';
 import 'lib_l10n_ru.dart';
@@ -109,7 +111,9 @@ abstract class LibLocalizations {
     Locale('es'),
     Locale('fr'),
     Locale('id'),
+    Locale('it'),
     Locale('ja'),
+    Locale('ko'),
     Locale('nl'),
     Locale('pt'),
     Locale('ru'),
@@ -329,6 +333,12 @@ abstract class LibLocalizations {
   /// **'Download'**
   String get download;
 
+  /// No description provided for @duration.
+  ///
+  /// In en, this message translates to:
+  /// **'Duration'**
+  String get duration;
+
   /// No description provided for @edit.
   ///
   /// In en, this message translates to:
@@ -419,6 +429,18 @@ abstract class LibLocalizations {
   /// **'Folder'**
   String get folder;
 
+  /// No description provided for @font.
+  ///
+  /// In en, this message translates to:
+  /// **'Font'**
+  String get font;
+
+  /// No description provided for @found.
+  ///
+  /// In en, this message translates to:
+  /// **'Found'**
+  String get found;
+
   /// No description provided for @hideTitleBar.
   ///
   /// In en, this message translates to:
@@ -443,6 +465,12 @@ abstract class LibLocalizations {
   /// **'Import'**
   String get import;
 
+  /// No description provided for @init.
+  ///
+  /// In en, this message translates to:
+  /// **'Initialize'**
+  String get init;
+
   /// No description provided for @key.
   ///
   /// In en, this message translates to:
@@ -454,6 +482,12 @@ abstract class LibLocalizations {
   /// In en, this message translates to:
   /// **'Language'**
   String get language;
+
+  /// No description provided for @license.
+  ///
+  /// In en, this message translates to:
+  /// **'License'**
+  String get license;
 
   /// No description provided for @log.
   ///
@@ -478,6 +512,12 @@ abstract class LibLocalizations {
   /// In en, this message translates to:
   /// **'Logout'**
   String get logout;
+
+  /// No description provided for @manual.
+  ///
+  /// In en, this message translates to:
+  /// **'Manual'**
+  String get manual;
 
   /// No description provided for @migrateCfg.
   ///
@@ -569,6 +609,12 @@ abstract class LibLocalizations {
   /// **'Path'**
   String get path;
 
+  /// No description provided for @preview.
+  ///
+  /// In en, this message translates to:
+  /// **'Preview'**
+  String get preview;
+
   /// No description provided for @previous.
   ///
   /// In en, this message translates to:
@@ -641,6 +687,12 @@ abstract class LibLocalizations {
   /// **'Restore'**
   String get restore;
 
+  /// No description provided for @result.
+  ///
+  /// In en, this message translates to:
+  /// **'Result'**
+  String get result;
+
   /// No description provided for @retry.
   ///
   /// In en, this message translates to:
@@ -652,6 +704,12 @@ abstract class LibLocalizations {
   /// In en, this message translates to:
   /// **'Save'**
   String get save;
+
+  /// No description provided for @saveFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Save failed'**
+  String get saveFailed;
 
   /// No description provided for @search.
   ///
@@ -683,11 +741,29 @@ abstract class LibLocalizations {
   /// **'Share'**
   String get share;
 
+  /// No description provided for @size.
+  ///
+  /// In en, this message translates to:
+  /// **'Size'**
+  String get size;
+
   /// No description provided for @sizeTooLargeOnlyPrefix.
   ///
   /// In en, this message translates to:
   /// **'Content too large, displaying only the first {bytes}'**
   String sizeTooLargeOnlyPrefix(Object bytes);
+
+  /// No description provided for @start.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get start;
+
+  /// No description provided for @stop.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get stop;
 
   /// No description provided for @success.
   ///
@@ -743,6 +819,12 @@ abstract class LibLocalizations {
   /// **'Thinking'**
   String get thinking;
 
+  /// No description provided for @timeout.
+  ///
+  /// In en, this message translates to:
+  /// **'Timeout'**
+  String get timeout;
+
   /// No description provided for @undo.
   ///
   /// In en, this message translates to:
@@ -766,6 +848,12 @@ abstract class LibLocalizations {
   /// In en, this message translates to:
   /// **'Update'**
   String get update;
+
+  /// No description provided for @upload.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload'**
+  String get upload;
 
   /// No description provided for @user.
   ///
@@ -802,6 +890,528 @@ abstract class LibLocalizations {
   /// In en, this message translates to:
   /// **'Yesterday'**
   String get yesterday;
+
+  /// No description provided for @addr.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get addr;
+
+  /// No description provided for @available.
+  ///
+  /// In en, this message translates to:
+  /// **'Available'**
+  String get available;
+
+  /// No description provided for @convert.
+  ///
+  /// In en, this message translates to:
+  /// **'Convert'**
+  String get convert;
+
+  /// No description provided for @experimentalFeature.
+  ///
+  /// In en, this message translates to:
+  /// **'Experimental Feature'**
+  String get experimentalFeature;
+
+  /// No description provided for @foregroundService.
+  ///
+  /// In en, this message translates to:
+  /// **'Foreground Service'**
+  String get foregroundService;
+
+  /// No description provided for @goto.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to'**
+  String get goto;
+
+  /// No description provided for @invalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid'**
+  String get invalid;
+
+  /// No description provided for @valid.
+  ///
+  /// In en, this message translates to:
+  /// **'Valid'**
+  String get valid;
+
+  /// No description provided for @max.
+  ///
+  /// In en, this message translates to:
+  /// **'Maximum'**
+  String get max;
+
+  /// No description provided for @min.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimum'**
+  String get min;
+
+  /// No description provided for @more.
+  ///
+  /// In en, this message translates to:
+  /// **'More'**
+  String get more;
+
+  /// No description provided for @milliseconds.
+  ///
+  /// In en, this message translates to:
+  /// **'Milliseconds'**
+  String get milliseconds;
+
+  /// No description provided for @permission.
+  ///
+  /// In en, this message translates to:
+  /// **'Permission'**
+  String get permission;
+
+  /// No description provided for @read.
+  ///
+  /// In en, this message translates to:
+  /// **'Read'**
+  String get read;
+
+  /// No description provided for @write.
+  ///
+  /// In en, this message translates to:
+  /// **'Write'**
+  String get write;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @speed.
+  ///
+  /// In en, this message translates to:
+  /// **'Speed'**
+  String get speed;
+
+  /// No description provided for @stat.
+  ///
+  /// In en, this message translates to:
+  /// **'Statistics'**
+  String get stat;
+
+  /// No description provided for @time.
+  ///
+  /// In en, this message translates to:
+  /// **'Time'**
+  String get time;
+
+  /// No description provided for @times.
+  ///
+  /// In en, this message translates to:
+  /// **'Times'**
+  String get times;
+
+  /// No description provided for @used.
+  ///
+  /// In en, this message translates to:
+  /// **'Used'**
+  String get used;
+
+  /// No description provided for @view.
+  ///
+  /// In en, this message translates to:
+  /// **'View'**
+  String get view;
+
+  /// No description provided for @askAiModel.
+  ///
+  /// In en, this message translates to:
+  /// **'Model'**
+  String get askAiModel;
+
+  /// No description provided for @battery.
+  ///
+  /// In en, this message translates to:
+  /// **'Battery'**
+  String get battery;
+
+  /// No description provided for @cmd.
+  ///
+  /// In en, this message translates to:
+  /// **'Command'**
+  String get cmd;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @conn.
+  ///
+  /// In en, this message translates to:
+  /// **'Connection'**
+  String get conn;
+
+  /// No description provided for @container.
+  ///
+  /// In en, this message translates to:
+  /// **'Container'**
+  String get container;
+
+  /// No description provided for @customCmdDocUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'https://github.com/lollipopkit/flutter_server_box/wiki#custom-commands'**
+  String get customCmdDocUrl;
+
+  /// No description provided for @decode.
+  ///
+  /// In en, this message translates to:
+  /// **'Decode'**
+  String get decode;
+
+  /// No description provided for @decompress.
+  ///
+  /// In en, this message translates to:
+  /// **'Decompress'**
+  String get decompress;
+
+  /// No description provided for @disconnected.
+  ///
+  /// In en, this message translates to:
+  /// **'Disconnected'**
+  String get disconnected;
+
+  /// No description provided for @disk.
+  ///
+  /// In en, this message translates to:
+  /// **'Disk'**
+  String get disk;
+
+  /// No description provided for @emulator.
+  ///
+  /// In en, this message translates to:
+  /// **'Emulator'**
+  String get emulator;
+
+  /// No description provided for @encode.
+  ///
+  /// In en, this message translates to:
+  /// **'Encode'**
+  String get encode;
+
+  /// No description provided for @force.
+  ///
+  /// In en, this message translates to:
+  /// **'Force'**
+  String get force;
+
+  /// No description provided for @host.
+  ///
+  /// In en, this message translates to:
+  /// **'Host'**
+  String get host;
+
+  /// No description provided for @inner.
+  ///
+  /// In en, this message translates to:
+  /// **'Inner'**
+  String get inner;
+
+  /// No description provided for @install.
+  ///
+  /// In en, this message translates to:
+  /// **'install'**
+  String get install;
+
+  /// No description provided for @location.
+  ///
+  /// In en, this message translates to:
+  /// **'Location'**
+  String get location;
+
+  /// No description provided for @loadingEllipsis.
+  ///
+  /// In en, this message translates to:
+  /// **'...'**
+  String get loadingEllipsis;
+
+  /// No description provided for @logs.
+  ///
+  /// In en, this message translates to:
+  /// **'Logs'**
+  String get logs;
+
+  /// No description provided for @loss.
+  ///
+  /// In en, this message translates to:
+  /// **'loss'**
+  String get loss;
+
+  /// No description provided for @menuHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Help'**
+  String get menuHelp;
+
+  /// No description provided for @menuInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Info'**
+  String get menuInfo;
+
+  /// No description provided for @menuNavigate.
+  ///
+  /// In en, this message translates to:
+  /// **'Navigate'**
+  String get menuNavigate;
+
+  /// No description provided for @menuQuit.
+  ///
+  /// In en, this message translates to:
+  /// **'Quit'**
+  String get menuQuit;
+
+  /// No description provided for @menuSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting'**
+  String get menuSettings;
+
+  /// No description provided for @menuWiki.
+  ///
+  /// In en, this message translates to:
+  /// **'Wiki'**
+  String get menuWiki;
+
+  /// No description provided for @mission.
+  ///
+  /// In en, this message translates to:
+  /// **'Mission'**
+  String get mission;
+
+  /// No description provided for @ms.
+  ///
+  /// In en, this message translates to:
+  /// **'ms'**
+  String get ms;
+
+  /// No description provided for @net.
+  ///
+  /// In en, this message translates to:
+  /// **'Network'**
+  String get net;
+
+  /// No description provided for @node.
+  ///
+  /// In en, this message translates to:
+  /// **'Node'**
+  String get node;
+
+  /// No description provided for @notAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Unavailable'**
+  String get notAvailable;
+
+  /// No description provided for @pingAvg.
+  ///
+  /// In en, this message translates to:
+  /// **'Avg:'**
+  String get pingAvg;
+
+  /// No description provided for @pkg.
+  ///
+  /// In en, this message translates to:
+  /// **'Pkg'**
+  String get pkg;
+
+  /// No description provided for @port.
+  ///
+  /// In en, this message translates to:
+  /// **'Port'**
+  String get port;
+
+  /// No description provided for @portForward.
+  ///
+  /// In en, this message translates to:
+  /// **'Port Forward'**
+  String get portForward;
+
+  /// No description provided for @process.
+  ///
+  /// In en, this message translates to:
+  /// **'Process'**
+  String get process;
+
+  /// No description provided for @prune.
+  ///
+  /// In en, this message translates to:
+  /// **'Prune'**
+  String get prune;
+
+  /// No description provided for @reboot.
+  ///
+  /// In en, this message translates to:
+  /// **'Reboot'**
+  String get reboot;
+
+  /// No description provided for @restart.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart'**
+  String get restart;
+
+  /// No description provided for @route.
+  ///
+  /// In en, this message translates to:
+  /// **'Routing'**
+  String get route;
+
+  /// No description provided for @run.
+  ///
+  /// In en, this message translates to:
+  /// **'Run'**
+  String get run;
+
+  /// No description provided for @running.
+  ///
+  /// In en, this message translates to:
+  /// **'Running'**
+  String get running;
+
+  /// No description provided for @saved.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
+  String get saved;
+
+  /// No description provided for @sensors.
+  ///
+  /// In en, this message translates to:
+  /// **'Sensor'**
+  String get sensors;
+
+  /// No description provided for @sequence.
+  ///
+  /// In en, this message translates to:
+  /// **'Sequence'**
+  String get sequence;
+
+  /// No description provided for @server.
+  ///
+  /// In en, this message translates to:
+  /// **'Server'**
+  String get server;
+
+  /// No description provided for @servers.
+  ///
+  /// In en, this message translates to:
+  /// **'servers'**
+  String get servers;
+
+  /// No description provided for @shutdown.
+  ///
+  /// In en, this message translates to:
+  /// **'Shutdown'**
+  String get shutdown;
+
+  /// No description provided for @snippet.
+  ///
+  /// In en, this message translates to:
+  /// **'Snippet'**
+  String get snippet;
+
+  /// No description provided for @stats.
+  ///
+  /// In en, this message translates to:
+  /// **'Statistics'**
+  String get stats;
+
+  /// No description provided for @stopped.
+  ///
+  /// In en, this message translates to:
+  /// **'Stopped'**
+  String get stopped;
+
+  /// No description provided for @storage.
+  ///
+  /// In en, this message translates to:
+  /// **'Storage'**
+  String get storage;
+
+  /// No description provided for @suspend.
+  ///
+  /// In en, this message translates to:
+  /// **'Suspend'**
+  String get suspend;
+
+  /// No description provided for @sudoPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'sudo password'**
+  String get sudoPassword;
+
+  /// No description provided for @sudoPwdTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'sudo {pwd}'**
+  String sudoPwdTitle(Object pwd);
+
+  /// No description provided for @temperature.
+  ///
+  /// In en, this message translates to:
+  /// **'Temperature'**
+  String get temperature;
+
+  /// No description provided for @terminal.
+  ///
+  /// In en, this message translates to:
+  /// **'Terminal'**
+  String get terminal;
+
+  /// No description provided for @test.
+  ///
+  /// In en, this message translates to:
+  /// **'Test'**
+  String get test;
+
+  /// No description provided for @theme.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get theme;
+
+  /// No description provided for @total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get total;
+
+  /// No description provided for @totalAttempts.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get totalAttempts;
+
+  /// No description provided for @traffic.
+  ///
+  /// In en, this message translates to:
+  /// **'Traffic'**
+  String get traffic;
+
+  /// No description provided for @ttl.
+  ///
+  /// In en, this message translates to:
+  /// **'TTL'**
+  String get ttl;
+
+  /// No description provided for @uptime.
+  ///
+  /// In en, this message translates to:
+  /// **'Uptime'**
+  String get uptime;
 }
 
 class _LibLocalizationsDelegate
@@ -820,7 +1430,9 @@ class _LibLocalizationsDelegate
     'es',
     'fr',
     'id',
+    'it',
     'ja',
+    'ko',
     'nl',
     'pt',
     'ru',
@@ -858,8 +1470,12 @@ LibLocalizations lookupLibLocalizations(Locale locale) {
       return LibLocalizationsFr();
     case 'id':
       return LibLocalizationsId();
+    case 'it':
+      return LibLocalizationsIt();
     case 'ja':
       return LibLocalizationsJa();
+    case 'ko':
+      return LibLocalizationsKo();
     case 'nl':
       return LibLocalizationsNl();
     case 'pt':
